@@ -2,11 +2,15 @@ package test;
 
 public class BankAccount {
 
+    double refill(){
+        balance =balance + upRefill;
+        return balance;
+    }
 
         int id;
         String name;
         double balance;
-
+        double upRefill;
 
 
 
@@ -28,7 +32,9 @@ class BankAccountTest {
         HisAccount.id=4;
         HisAccount.name="Zahar";
         HisAccount.balance=44.22;
+        myAccount.upRefill = 147.22;
+        BankAccount ref = new BankAccount();
+        System.out.println("Пополнение баланса аккаунта:  " + myAccount.id + "\n" + "На сумму: " + myAccount.upRefill + "\n" + "Доступный остаток: " + myAccount.refill());
 
-        System.out.println(YourAccount.id);
     }
 }
